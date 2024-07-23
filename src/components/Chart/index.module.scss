@@ -1,0 +1,343 @@
+.container {
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  background-color: var(--dark);
+  border-radius: 2.3rem;
+  display: flex;
+  padding: 4rem;
+  gap: 4rem;
+  flex-direction: row;
+  margin: 5vh 0 0 0;
+  color: white;
+  overflow: hidden;
+
+  .rowColumn {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    gap: 1.45rem;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 3.8rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .chartContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 5rem;
+      letter-spacing: 0em;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .highlightedGreen {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--green);
+        background-color: #07ec9000;
+      }
+    }
+
+    .priceTitle {
+      position: relative;
+
+      .dimmedDate {
+        position: absolute;
+        bottom: -1.8rem;
+        left: 0;
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 1.27rem;
+        color: rgba(255, 255, 255, 0.36);
+      }
+    }
+
+    .dateButtons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1em;
+
+      button {
+        font-size: 0.9rem;
+      }
+    }
+
+    .mainItemCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 2rem 0.3rem 0.5rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 1.67rem;
+      width: fit-content;
+      color: black;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+
+      .nameContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 1rem;
+
+        h2 {
+          font-size: 1.6rem;
+          font-weight: 800;
+          line-height: 2.5rem;
+          letter-spacing: 0em;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: 700;
+          line-height: 2.25rem;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .detailsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+
+    .subRow {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      position: relative;
+      user-select: none;
+
+      .input {
+        font-size: 1em;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: white;
+        text-align: end;
+
+      }
+
+      span {
+        position: relative;
+      }
+
+      .editContainer {
+        position: absolute;
+        right: 0;
+        bottom: -1em;
+        transform: translateY(100%);
+        color: black;
+        z-index: 100;
+
+        .optionsWrapper {
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+          gap: 1em;
+          border-radius: 1em;
+          padding: 1em;
+
+          button {
+            background-color: var(--pale-grey);
+            user-select: none;
+            padding: 1em;
+            border-radius: 1em;
+            border: none;
+            cursor: pointer;
+
+            &:active {
+              background-color: var(--green);
+            }
+          }
+        }
+
+
+        .editNumberContainer {
+          background-color: white;
+          border-radius: 1em;
+          overflow: hidden;
+          padding: 0.5em;
+          display: flex;
+          grid-area: 1em;
+
+
+          .saveButton {
+            font-size: 1em;
+            font-weight: 600;
+            background-color: var(--green);
+            outline: none;
+            border: none;
+            border-radius: 0.5em;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .resetButton {
+        width: fit-content;
+        padding: 0.7em 0.7em;
+        background-color: white;
+        border-radius: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: black;
+        font-weight: 700;
+        gap: 1em;
+
+        img {
+          width: 1em;
+          height: 1em;
+        }
+      }
+
+      p {
+        font-size: 1.05rem;
+        color: var(--dimmed);
+        text-align: start;
+      }
+
+      span {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .imgContainer {
+        background-color: rgb(255, 255, 255);
+        padding: 0.4em;
+        border-radius: 1em;
+        color: black;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        // img {
+        //   width: fit-content;
+        //   width: 20px;
+        //   user-select: none;
+        // }
+
+        #blackArrow {
+          width: 15px;
+        }
+      }
+
+      img {
+        width: 0.75rem;
+        height: 100%;
+        transition: all 0.3s ease;
+        user-select: none;
+      }
+    }
+
+    .editIcon {
+      width: 20px;
+      user-select: none;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    .searchContainer {
+      position: relative;
+      width: 100%;
+      border-radius: 25px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 1.5rem;
+      background-color: white;
+      overflow: hidden;
+      cursor: pointer;
+
+      div {
+        width: fit-content;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        text-wrap: nowrap;
+        color: black;
+        background-color: white !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .container {
+    padding: 2em;
+    gap: 0em !important;
+  }
+
+  .row {
+    align-items: start !important;
+  }
+
+  .resetButtonContainer {
+    justify-content: center !important;
+
+    .resetButton {
+      width: 100% !important;
+      gap: 2rem !important;
+
+      img {
+        width: 2em !important;
+        height: 2em !important;
+      }
+    }
+  }
+
+  .resetButton {}
+}

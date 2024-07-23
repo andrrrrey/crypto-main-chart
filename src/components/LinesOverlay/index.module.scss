@@ -1,0 +1,182 @@
+.container {
+  position: absolute;
+  // background-color: rgba(255, 0, 0, 0.292);
+  user-select: none;
+
+  .gridLine {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(255, 0, 0, 0.177);
+  }
+
+  .testElement {
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 50px;
+    background-color: rgb(167, 132, 132);
+  }
+
+  .boughtLine {
+    position: absolute;
+    // left: 50%;
+    width: 2px;
+    background: rgba(57, 184, 224, 1);
+    top: 10px;
+  }
+
+
+  .boughtButton {
+    position: absolute;
+
+    bottom: -5rem;
+    padding: 1rem;
+
+    .boughtButtonGrabber {
+      width: fit-content;
+      border-radius: 0.75rem;
+      background: rgba(57, 184, 224, 1);
+
+
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      line-height: 1.3rem;
+      font-weight: 700;
+      user-select: none;
+      transform: translateY(50%);
+    }
+  }
+
+  .soldLine {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    background: rgba(221, 0, 0, 1);
+
+    top: 10px;
+  }
+
+  .soldButton {
+    position: absolute;
+    
+    bottom: -5rem;
+    padding: 1rem;
+    z-index: 1000;
+
+    .soldButtonGrabber {
+      width: fit-content;
+      border-radius: 0.75rem;
+      background: rgba(221, 0, 0, 1);
+
+      padding: 0.3rem 0.6rem;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      line-height: 1.3rem;
+      font-weight: 700;
+      user-select: none;
+      transform: translateY(50%);
+    }
+
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .hoverLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    /* Set the width of your vertical line */
+    border-left-width: 2px;
+    /* Set the width of each dash */
+    /* Specify the dash and gap pattern */
+    background: repeating-linear-gradient(#ffffff00,
+        #ffffff00 10px,
+        rgba(255, 255, 255, 0.866) 10px,
+        rgba(255, 255, 255, 0.866) 20px);
+  }
+
+  .touchLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    /* Set the width of your vertical line */
+    border-left-width: 2px;
+    /* Set the width of each dash */
+    /* Specify the dash and gap pattern */
+    background: repeating-linear-gradient(#ffffff00,
+        #ffffff00 10px,
+        rgba(255, 255, 255, 0.866) 10px,
+        rgba(255, 255, 255, 0.866) 20px);
+  }
+
+  .label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: var(--pale-grey);
+    min-width: 200px;
+    height: fit-content;
+    border-radius: 0.75rem;
+    color: black;
+    text-align: start;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-wrap: nowrap;
+  }
+
+  .hoverLabel {
+    position: absolute;
+    top: 20%;
+    background-color: var(--pale-grey);
+    min-width: 200px;
+    height: fit-content;
+    border-radius: 0.75rem;
+    color: black;
+    text-align: start;
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    font-weight: 500;
+    line-height: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .touchLabel {
+    position: absolute;
+    top: 10%;
+    background-color: var(--pale-grey);
+    min-width: 100px;
+    height: fit-content;
+    border-radius: 0.75rem;
+    color: black;
+    text-align: start;
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+    gap: 0.5rem;
+  }
+}

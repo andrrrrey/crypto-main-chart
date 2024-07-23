@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  margin: 10vh 0;
+  color: rgba(42, 47, 68, 1);
+  height: fit-content;
+
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: start;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    line-height: 1.5rem;
+    text-align: start;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(145, 131, 228, 0.1);
+    padding: 3rem;
+    border-radius: 2rem;
+    width: 40%;
+    height: 100%;
+
+
+
+    .description {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    width: 40%;
+    // gap: 1.5rem;
+    padding: 0 0 0 4rem;
+    height: 100%;
+    padding-top: 3rem;
+
+    h3 {
+      margin-bottom: 3rem;
+    }
+
+    .newsCardsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .newsCard {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        position: relative;
+
+
+        h5 {
+          font-weight: 700;
+          font-size: 1.3rem;
+          line-height: 1.95rem;
+          text-align: left;
+        }
+
+        h6 {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: " ";
+          background: rgba(145, 131, 228, 0.1);
+
+
+          width: 100%;
+          height: 2px;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 428px) {
+  .container {
+    width: 100%;
+    margin: 4em 0 !important;
+    gap: 5em;
+
+    .about {
+      width: 100%;
+      padding: 0;
+      background-color: transparent !important;
+      gap: 0.7rem;
+
+      .description {
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+      }
+    }
+
+    .news {
+      width: 100%;
+      padding: 0;
+
+      .newsCard {
+        border: 1px solid rgba(145, 131, 228, 0.1);
+        border-radius: 2.5rem;
+        padding: 1.8rem;
+        font-size: 1.4rem !important;
+        gap: 0.9rem !important;
+
+        h6 {
+          margin-left: 0.5rem;
+        }
+
+        p {
+          line-height: 1.9rem;
+        }
+
+        h5 {
+          font-size: 2rem !important;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

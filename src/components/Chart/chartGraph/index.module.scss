@@ -1,0 +1,28 @@
+.chartRow {
+  width: 100% !important;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.range {
+  width: 100%;
+}
+
+.errorMessageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: red;
+}
+
+.chartjs-chart .chartjs-axis .chartjs-axis-label {
+  white-space: pre-wrap;
+  text-align: center;
+  /* Adjust text alignment as needed */
+  writing-mode: vertical-rl;
+  color: red;
+  /* Vertical writing mode */
+}

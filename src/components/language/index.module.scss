@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.27rem;
+  background-color: var(--pale-grey);
+  border-radius: 1.1rem;
+  width: fit-content;
+  padding: 0.5rem 1rem 0.5rem 0.8rem;
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  height: 100%; // Fills the available vertical space
+}
+@media (max-width: 428px) {
+  .container {
+    width: 100% !important;
+    justify-content: space-between;
+    height: 4em;
+  }
+}
