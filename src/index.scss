@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+html,
+body {
+  font-family: "Poppins", sans-serif;
+
+  margin: 0;
+}
+
+html {
+  font-size: 13px;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: var(--white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --dark-grey: #526d7a;
+  --pale-grey: #f4f3fc;
+  --paler-grey: #eae8fa;
+  --dark: #2a2f44;
+  --white: #fff;
+  --green: #07ec90;
+  --red: #f8196f;
+  --dimmed: rgba(255, 255, 255, 0.36);
+  --max-mobile-width: 1000px;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+.navbar-button {
+  color: #6d838e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pale-button {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1em 1.5em;
+
+  margin: 0;
+  height: fit-content;
+  border-radius: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale-grey);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  gap: 1em;
+  position: relative;
+  font-size: 1rem;
+}
+
+.highlighted-timeframe-button {
+  color: black;
+  width: fit-content;
+  font-weight: 700;
+  text-decoration: none;
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 0.75rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.normal-timeframe-button {
+  color: black;
+  width: fit-content;
+  font-weight: 700;
+  text-decoration: none;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 0.75rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--dimmed);
+}
+
+.green {
+  color: var(--green);
+  font-weight: 700;
+}
+
+#chartContainer {
+  overflow: visible;
+}
+
+.displayOnMobileView {
+  display: none !important;
+}
+
+@media (max-width: 428px) {
+  html {
+    font-size: 10px !important;
+  }
+
+  .removeOnMobileView {
+    display: none !important;
+  }
+
+  .displayOnMobileView {
+    display: flex !important;
+  }
+
+  .flexDirectionColumnOnMobileView {
+    flex-direction: column;
+    display: flex;
+  }
+
+}
